@@ -11,18 +11,18 @@
   --bs-pink: #d63384;
   --bs-red: #dc3545;
   --bs-orange: #cc0000;
-  --bs-yellow: #ffc107;
+  --bs-yellow: #cc0000;
   --bs-green: #198754;
   --bs-teal: #20c997;
   --bs-cyan: #0dcaf0;
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
-  --bs-primary: #fea116;
+  --bs-primary: #cc0000;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
-  --bs-warning: #ffc107;
+  --bs-warning: #cc0000;
   --bs-danger: #dc3545;
   --bs-light: #f1f8ff;
   --bs-dark: #0f172b;
@@ -203,11 +203,11 @@ sup {
   top: -0.5em;
 }
 a {
-  color: #fea116;
+  color: #f0f0f0;
   text-decoration: none;
 }
 a:hover {
-  color: #cb8112;
+  color: #cc0000;
 }
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
@@ -1839,7 +1839,7 @@ progress {
 .form-control:focus {
   color: #666565;
   background-color: #fff;
-  border-color: #ffd08b;
+  border-color: #cc0000;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(254, 161, 22, 0.25);
 }
@@ -1992,7 +1992,7 @@ textarea.form-control-lg {
   appearance: none;
 }
 .form-select:focus {
-  border-color: #ffd08b;
+  border-color: #cc0000;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(254, 161, 22, 0.25);
 }
@@ -2053,13 +2053,13 @@ textarea.form-control-lg {
   filter: brightness(90%);
 }
 .form-check-input:focus {
-  border-color: #ffd08b;
+  border-color: #cc0000;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(254, 161, 22, 0.25);
 }
 .form-check-input:checked {
-  background-color: #fea116;
-  border-color: #fea116;
+  background-color: #cc0000;
+  border-color: #cc0000;
 }
 .form-check-input:checked[type="checkbox"] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
@@ -2068,7 +2068,7 @@ textarea.form-control-lg {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
 }
 .form-check-input[type="checkbox"]:indeterminate {
-  background-color: #fea116;
+  background-color: #cc0000;
   border-color: #fea116;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
@@ -2142,7 +2142,7 @@ textarea.form-control-lg {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #fea116;
+  background-color: #cc0000;
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
@@ -2549,8 +2549,8 @@ fieldset:disabled .btn {
 }
 .btn-primary {
   color: #000;
-  background-color: #fea116;
-  border-color: #fea116;
+  background-color: #cc0000;
+  border-color: #f0f0f0;
 }
 .btn-primary:hover {
   color: #000;
@@ -2561,7 +2561,7 @@ fieldset:disabled .btn {
 .btn-primary:focus {
   color: #000;
   background-color: #feaf39;
-  border-color: #feaa2d;
+  border-color: #cc0000;
   box-shadow: 0 0 0 0.25rem rgba(216, 137, 19, 0.5);
 }
 .btn-check:checked + .btn-primary,
@@ -2570,8 +2570,8 @@ fieldset:disabled .btn {
 .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
   color: #000;
-  background-color: #feb445;
-  border-color: #feaa2d;
+  background-color: #cc0000;
+  border-color: #cc0000;
 }
 .btn-check:checked + .btn-primary:focus,
 .btn-check:active + .btn-primary:focus,
@@ -2583,8 +2583,8 @@ fieldset:disabled .btn {
 .btn-primary:disabled,
 .btn-primary.disabled {
   color: #000;
-  background-color: #fea116;
-  border-color: #fea116;
+  background-color: #cc0000;
+  border-color: #cc0000;
 }
 .btn-secondary {
   color: #fff;
@@ -6045,7 +6045,7 @@ fieldset:disabled .btn {
   border-left: 0 !important;
 }
 .border-primary {
-  border-color: #fea116 !important;
+  border-color: #cc0000 !important;
 }
 .border-secondary {
   border-color: #6c757d !important;
@@ -6787,7 +6787,7 @@ fieldset:disabled .btn {
   word-break: break-word !important;
 }
 .text-primary {
-  color: #fea116 !important;
+  color: #cc0000 !important;
 }
 .text-secondary {
   color: #6c757d !important;
