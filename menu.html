@@ -1,602 +1,521 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Restoran - Bootstrap Restaurant Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
         </div>
-        <!-- Spinner End -->
+      </div>
+      <!-- Spinner End -->
 
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Inn n' Out </h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="menu.html" class="nav-item nav-link active">Menu</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="Login.html" class="btn btn-primary py-2 px-4">Book A Table</a>
+      <!-- Navbar & Hero Start -->
+      <div class="container-xxl position-relative p-0">
+        <nav
+          class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0"
+        >
+          <a href="" class="navbar-brand p-0">
+            <h1 class="text-primary m-0">
+              <i class="fa fa-utensils me-3"></i>Restoran
+            </h1>
+            <!-- <img src="img/logo.png" alt="Logo"> -->
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="service.html" class="nav-item nav-link">Service</a>
+              <a href="menu.html" class="nav-item nav-link">Menu</a>
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >Pages</a
+                >
+                <div class="dropdown-menu m-0">
+                  <a href="booking.html" class="dropdown-item">Booking</a>
+                  <a href="team.html" class="dropdown-item">Our Team</a>
+                  <a href="testimonial.html" class="dropdown-item"
+                    >Testimonial</a
+                  >
                 </div>
+              </div>
+              <a href="contact.html" class="nav-item nav-link active"
+                >Contact</a
+              >
+            </div>
+            <a href="Login.html" class="btn btn-primary py-2 px-4">Login</a>
+          </div>
+        </nav>
+
+        <div class="container-xxl py-5 bg-dark hero-header mb-5">
+          <div class="container text-center my-5 pt-5 pb-4">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">
+              Order with Us 
+            </h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center text-uppercase">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li
+                  class="breadcrumb-item text-white active"
+                  aria-current="page"
+                >
+                  Contact
+                </li>
+              </ol>
             </nav>
-
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Food Menu</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Menu</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+          </div>
         </div>
-        <!-- Navbar & Hero End -->
+      </div>
+      <!-- Navbar & Hero End -->
 
-
-        <!-- Menu Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
-                    <h1 class="mb-5">Most Popular Items</h1>
-                </div>
-                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-                                <i class="fa fa-coffee fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">special</small>
-                                    <h6 class="mt-n1 mb-0">Brunch</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
-                                <i class="fa fa-hamburger fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Popular</small>
-                                    <h6 class="mt-n1 mb-0">breakfast</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-                                <i class="fa fa-utensils fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Gen-Z</small>
-                                    <h6 class="mt-n1 mb-0">combos</h6>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Vegetable Rice</span>
-                                                <span class="text-primary">ksh 170</span>
-                                              </h5>
-                                              <small class="fst-italic"
-                                                >Our vegetable rice is a flavorful and nutritious side dish made with a medley of sautéed vegetables, aromatic spices, and a hint of herbs, 
-                                                carefully cooked to perfection to complement our signature dishes at Inn n' Out.</small
-                                              >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>ugali</span>
-                          <span class="text-primary">ksh  160</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Our ugali is a traditional East African staple made from cornmeal, carefully cooked to a smooth and creamy consistency, 
-                          and served alongside a variety of savory sauces and stews, 
-                          offering a comforting and filling accompaniment to your meal at Inn n' Out.</small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>French fries</span>
-                                                <span class="text-primary">ksh 200</span>
-                                              </h5>
-                                              <small class="fst-italic"
-                                                >Thick-cut and cooked twice for extra crunch</small
-                                              >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Pilau</span>
-                          <span class="text-primary">ksh 180</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Pilau is a popular Swahili dish made with aromatic spices, tender meat or vegetables, and flavorful rice, often 
-                          served with a side of fresh cilantro and a squeeze of lime juice. This mouth-watering dish can be customized with various 
-                          ingredients and accompaniments, such as kachumbari.</small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chicken</span>
-                                                <span class="text-primary">ksh 300</span>
-                                              </h5>
-                                              <small class="fst-italic"
-                                                >Crispy fried chicken tenders made with fresh, never frozen chicken, hand-breaded with a secret blend of spices and herbs, 
-                                                and cooked to a golden crisp. 
-                                                Served with a side of creamy honey mustard dipping sauce.</small
-                                              >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Mokimo</span>
-                                                <span class="text-primary">ksh 150</span>
-                                              </h5>
-                                              <small class="fst-italic"
-                                                >Mokimo is a traditional Kenyan dish made from mashed green bananas or plantains, often served 
-                                                with vegetables, meat, or beans, and is a staple food in many East African countries. The dish is typically 
-                                                prepared by boiling or steaming the green bananas, then mashing them with a mixture of vegetables, 
-                                                spices, and sometimes meat or beans, to create a flavorful and nutritious meal.</small
-                                              >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Fruit Juice</span>
-                                                <span class="text-primary">ksh 60</span>
-                                              </h5>
-                                              <small class="fst-italic"
-                                                >Fruit juice is a refreshing and nutritious beverage made from the extraction or pressing of juice from various fruits, 
-                                                such as pineapples, apples, or mango, and can be consumed on its own or used as a base for smoothies and other drinks. Fresh fruit juice is rich in essential vitamins, minerals, 
-                                                and antioxidants, making it a popular choice for those looking for a healthy and revitalizing drink option.</small
-                                              >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Beef</span>
-                          <span class="text-primary">ksh 300</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Wet fry beef, also known as "nyama choma" in Swahili, is a popular Kenyan dish made by slow-cooking beef in a flavorful stew 
-                          with a mixture of onions, tomatoes, and spices, resulting in tender and juicy meat. The dish is typically served with a side of ugali, 
-                          kachumbari, or chapati, 
-                          and is often enjoyed as a main course or snack in many East African countries.</small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Omelete</span>
-                                                <span class="text-primary">ksh 150</span>
-                                              </h5>
-                                              <small class="fst-italic"
-                                                >An omelette is a versatile and delicious dish made from beaten eggs cooked in a pan with various fillings such as vegetables, cheese, 
-                                                and meats, often folded over to create a fluffy and savory treat. Whether served as a breakfast staple, a quick snack, or a light meal, 
-                                                omelettes are a popular choice worldwide due to their ease of preparation and endless possibilities for customization.</small
-                                              >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Sausage</span>
-                                                <span class="text-primary">ksh 80</span>
-                                              </h5>
-                                              <small class="fst-italic"
-                                                >Sausages are a type of savory food made from ground meat, usually pork, beef, or chicken, mixed with spices 
-                                                and seasonings, stuffed into a casing, and cooked or smoked to create a flavorful and juicy snack or meal. With countless varieties and flavors available, 
-                                                sausages are a staple in many cuisines around the world, often served grilled, pan-fried, or added to dishes like stews, soups, and casseroles.</small
-                                              >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Sandwitch</span>
-                                                <span class="text-primary">ksh 100</span>
-                                              </h5>
-                                              <small class="fst-italic"
-                                                >A sandwich is a food item typically consisting of two or more slices of bread, often with fillings such as meats, cheeses, vegetables, 
-                                                and condiments between them. 
-                                                It's a versatile and convenient food that can be enjoyed at any time of day, whether as a quick snack, a light meal, or a satisfying lunch.</small
-                                              >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Bacon</span>
-                          <span class="text-primary">ksh 180</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Bacon is a type of cured and smoked pork meat, typically cut into thin strips, that is often cooked and served as a side dish, used as an ingredient in various recipes, or 
-                          added to other foods like sandwiches, salads, and breakfast dishes for its distinctive smoky flavor and crispy texture.</small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Pancake </span>
-                          <span class="text-primary">ksh 120</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >A pancake is a sweet or savory flat cake made from a batter of flour, eggs, and milk, often 
-                          cooked on a griddle or frying pan and typically served hot with various toppings such as butter, syrup, fruit, or whipped cream.</small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Waffles</span>
-                          <span class="text-primary">ksh 150</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Waffles are a type of baked food made from a batter of flour, eggs, and milk, similar to pancakes, but cooked in a waffle iron to create 
-                          a crispy exterior and a fluffy interior, typically served hot with various 
-                          toppings such as butter, syrup, fruit, whipped cream, or fresh herbs, and often enjoyed as a breakfast or brunch item.</small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Waffles</span>
-                          <span class="text-primary">ksh 150</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Waffles are a type of baked food made from a batter of flour, eggs, and milk, similar to pancakes, but cooked in a waffle iron to create 
-                          a crispy exterior and a fluffy interior, typically served hot with various 
-                          toppings such as butter, syrup, fruit, whipped cream, or fresh herbs, and often enjoyed as a breakfast or brunch item.</small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Muffins</span>
-                          <span class="text-primary">ksh 70</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >
-
-                        Muffins are small, baked treats that can be sweet or savory, made with a batter of flour, eggs, sugar,
-                           and baking powder. They are often flavored with ingredients like fruits, chocolate chips, or nuts and are typically enjoyed as a breakfast or snack item.
-                          </small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-3" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chicken Pie</span>
-                          <span class="text-primary">ksh 300</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Chicken pie is a savory dish made with a filling of chicken, vegetables, and gravy, typically enclosed in a pastry crust and baked until golden brown. 
-                          It's a comforting and satisfying meal that's popular in many parts of the world, often served hot and enjoyed as a main course or side dish.</small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>ugali ft beef</span>
-                          <span class="text-primary">ksh 180</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chapati ft beef</span>
-                          <span class="text-primary">ksh 370</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Rice ft mutton</span>
-                          <span class="text-primary">ksh 280</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Mukimo ft Beef</span>
-                          <span class="text-primary">ksh 200</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Pilau ft kachumbari</span>
-                          <span class="text-primary">ksh 250</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>chapati ft beans</span>
-                                                <span class="text-primary">250</span>
-                                              </h5>
-                                              <small class="fst-italic"
-                                                ></small
-                                              >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Smocha ft fruit juice</span>
-                                                <span class="text-primary">ksh 180</span>
-                                              </h5>
-                                              <small class="fst-italic"
-                                                ></small
-                                              >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- Menu Section Start -->
+      <section id="food-menu">
+        <div class="container">
+          <header class="section-header">
+            <h3>delicious Food Menu</h3>
+          </header>
+          <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="single-menu">
+                <img class="img-fluid" src="img2/menu-1.jpg" />
+                <h4>Lorem ipsum</h4>
+                <span>$20.00 / Person</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="order.html">Order Now</a>
+              </div>
             </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="single-menu">
+                <img class="img-fluid" src="img2/menu-2.jpg" />
+                <h4>Curabitur Commodo</h4>
+                <span>$10.00 / Person</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="order.html">Order Now</a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="single-menu">
+                <img class="img-fluid" src="img2/menu-3.jpg" />
+                <h4>Proin Tortor</h4>
+                <span>$12.00 / Person</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="order.html">Order Now</a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="single-menu">
+                <img class="img-fluid" src="img2/menu-4.jpg" />
+                <h4>Aliquam Erat</h4>
+                <span>$8.00 / Person</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="order.html">Order Now</a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="single-menu">
+                <img class="img-fluid" src="img2/menu-5.jpg" />
+                <h4>Curabitur Arcu Massa</h4>
+                <span>$18.00 / Person</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="order.html">Order Now</a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="single-menu">
+                <img class="img-fluid" src="img2/menu-6.jpg" />
+                <h4>Vestibulum Fringilla</h4>
+                <span>$15.00 / Person</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="order.html">Order Now</a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="single-menu">
+                <img class="img-fluid" src="img2/menu-7.jpg" />
+                <h4>Ullamcorper Facilisis</h4>
+                <span>$10.00 / Person</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="order.html">Order Now</a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="single-menu">
+                <img class="img-fluid" src="img2/menu-8.jpg" />
+                <h4>Integer Ullamcorper</h4>
+                <span>$22.00 / Person</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="order.html">Order Now</a>
+              </div>
+            </div>
+            <div
+              class="col-sm-6 col-md-4 col-lg-3 d-sm-none d-md-block d-lg-none"
+            >
+              <div class="single-menu">
+                <img class="img-fluid" src="img2/menu-9.jpg" />
+                <h4>Vestibulum Posuere</h4>
+                <span>$16.00 / Person</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <a href="order.html">Order Now</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Menu End -->
-        
+      </section>
+      <!-- Menu Section End-->
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Reservation</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Along Mombasa road , opposite Airtel HQ</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+2542176892282</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@innn'out@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+      <!-- Cart Section Start -->
+      <section id="cart">
+        <div class="container">
+          <header class="section-header">
+            <h3>Cart</h3>
+          </header>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="table-responsive-sm">
+                <table class="table table-bordered table-hover">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">Menu</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Lorem ipsum</th>
+                      <td>$10</td>
+                      <td>
+                        <div class="quantity">
+                          <input type="text" value="1" />
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday - Saturday</h5>
-                        <p>09AM - 09PM</p>
-                        <h5 class="text-light fw-normal">Sunday</h5>
-                        <p>10AM - 08PM</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
-                        <p>For queries</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                      </td>
+                      <td>$10</td>
+                      <td>
+                        <a href=""><i class="fa fa-trash-o"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Proin Tortor</th>
+                      <td>$15</td>
+                      <td>
+                        <div class="quantity">
+                          <input type="text" value="2" />
                         </div>
-                    </div>
-                </div>
+                      </td>
+                      <td>$30</td>
+                      <td>
+                        <a href=""><i class="fa fa-trash-o"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Aliquam Erat</th>
+                      <td>$20</td>
+                      <td>
+                        <div class="quantity">
+                          <input type="text" value="3" />
+                        </div>
+                      </td>
+                      <td>$60</td>
+                      <td>
+                        <a href=""><i class="fa fa-trash-o"></i></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="button">
+                <button type="submit">Checkout</button>
+              </div>
             </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Inn n' Out</a>, All Right Reserved. 
-							
-							
-							Designed By <a class="border-bottom" href="">IT job shadowing team</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <!-- Footer End -->
+      </section>
+      <!-- Cart Section End -->
+
+      <!-- Checkout Section Start -->
+      <section id="checkout">
+        <div class="container">
+          <header class="section-header">
+            <h3>Checkout</h3>
+          </header>
+          <div class="row form">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Full Name"
+                />
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Address" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="City" />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" placeholder="State" />
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" placeholder="Zip" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="cards">
+                <p>We Accept:</p>
+                <img src="img2/credit-cards.png" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Name on Card"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Credit card number"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Exp Month"
+                />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Exp Year"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" placeholder="CVV" />
+                </div>
+              </div>
+            </div>
+            <div class="button">
+              <button type="submit">Place Order</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Checkout Section End -->
+
+      <!-- Support Section Start -->
+      <section id="support">
+        <div class="container">
+          <h1>Need Reservations? Call Us 24/7 at +1-234-567-8900</h1>
+        </div>
+      </section>
+      <!-- Support Section end -->
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
+      
+       <!-- Footer Start -->
+      <div
+        class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+              <h4
+                class="section-title ff-secondary text-start text-primary fw-normal mb-4"
+              >
+                Company
+              </h4>
+              <a class="btn btn-link" href="">About Us</a>
+              <a class="btn btn-link" href="">Contact Us</a>
+              <a class="btn btn-link" href="">Reservation</a>
+              <a class="btn btn-link" href="">Privacy Policy</a>
+              <a class="btn btn-link" href="">Terms & Condition</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h4
+                class="section-title ff-secondary text-start text-primary fw-normal mb-4"
+              >
+                Contact
+              </h4>
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York,
+                USA
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i>info@example.com
+              </p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h4
+                class="section-title ff-secondary text-start text-primary fw-normal mb-4"
+              >
+                Opening
+              </h4>
+              <h5 class="text-light fw-normal">Monday - Saturday</h5>
+              <p>09AM - 09PM</p>
+              <h5 class="text-light fw-normal">Sunday</h5>
+              <p>10AM - 08PM</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h4
+                class="section-title ff-secondary text-start text-primary fw-normal mb-4"
+              >
+                Newsletter
+              </h4>
+              <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+              <div class="position-relative mx-auto" style="max-width: 400px">
+                <input
+                  class="form-control border-primary w-100 py-3 ps-4 pe-5"
+                  type="text"
+                  placeholder="Your email"
+                />
+                <button
+                  type="button"
+                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                >
+                  SignUp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All
+                Right Reserved.
+
+                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                Designed By
+                <a class="border-bottom" href="https://htmlcodex.com"
+                  >HTML Codex</a
+                >
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                  <a href="">Home</a>
+                  <a href="">Cookies</a>
+                  <a href="">Help</a>
+                  <a href="">FQAs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+
+      <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    </main>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery-migrate.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/easing/easing.min.js"></script>
+    <script src="vendor/stickyjs/sticky.js"></script>
+    <script src="vendor/superfish/hoverIntent.js"></script>
+    <script src="vendor/superfish/superfish.min.js"></script>
+    <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+    <script src="vendor/tempusdominus/js/moment.min.js"></script>
+    <script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
+    <!-- Main Javascript File -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
