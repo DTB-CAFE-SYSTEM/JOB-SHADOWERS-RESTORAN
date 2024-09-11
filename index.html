@@ -1035,7 +1035,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
   const message = document.getElementById('message').value;
 
   // Send form data to backend using fetch API
-  fetch('/api/book', {
+  fetch('https://food-booking-system.onrender.com/api/book', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
