@@ -7,11 +7,11 @@ body {
   color: #666;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  background: #ffd700;
+  background: #cc0000;
 }
 
 a {
-  color: #006400;
+  color: #cc0000;
   transition: 0.5s;
 }
 
@@ -35,7 +35,7 @@ h4,
 h5,
 h6 {
   font-family: "Nunito", sans-serif;
-  color: #666;
+  color: #cc0000;
   margin: 0 0 20px 0;
   padding: 0;
 }
@@ -43,8 +43,8 @@ h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #006400;
-  color: #ffd700;
+  background: #cc0000;
+  color: #ffffff;
   width: 44px;
   height: 44px;
   text-align: center;
@@ -59,8 +59,8 @@ h6 {
 }
 
 .back-to-top:hover {
-  color: #006400;
-  background: #ffd700;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 .back-to-top i {
@@ -179,7 +179,7 @@ h6 {
 }
 
 #top-header h2 {
-  color: #ffd700;
+  color: #cc0000;
   font-size: 60px;
   font-weight: 900;
 }
@@ -226,13 +226,13 @@ h6 {
 
 #top-header .btn-transparent {
   background: transparent;
-  color: #ffd700;
-  border: 2px solid #ffd700;
+  color: #cc0000;
+  border: 2px solid #cc0000;
 }
 
 #top-header .btn-transparent:hover {
-  color: #ffd700;
-  background: #006400;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 #top-header .btn-rounded {
@@ -328,7 +328,7 @@ h6 {
 .banner-header h1 {
   font-size: 90px;
   font-weight: 900;
-  color: #006400;
+  color: #cc0000;
   letter-spacing: 10px;
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
     1px 1px 0 #fff;
@@ -371,10 +371,10 @@ h6 {
 #header {
   font-family: "Nunito", sans-serif;
   position: relative;
-  background: #006400;
+  background: #cc0000;
   height: 70px;
   text-align: center;
-  border-bottom: 5px solid #ffd700;
+  border-bottom: 5px solid #cc0000;
 }
 
 @media (max-width: 767.98px) {
@@ -448,7 +448,7 @@ h6 {
   padding: 18px 15px 21px 15px;
   text-decoration: none;
   display: inline-block;
-  color: #ffd700;
+  color: #ffffff;
   font-weight: 600;
   font-size: 18px;
   outline: none;
@@ -457,8 +457,8 @@ h6 {
 .nav-menu a:hover,
 .nav-menu li:hover > a,
 .nav-menu .menu-active > a {
-  color: #006400;
-  background: #ffd700;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 .nav-menu ul {
@@ -477,7 +477,7 @@ h6 {
 }
 
 .nav-menu ul li:hover {
-  background: #ffd700;
+  background: #cc0000;
 }
 
 .nav-menu ul li a {
@@ -504,7 +504,7 @@ h6 {
   margin: 10px 10px 0 0;
   padding: 10px 12px;
   border: 0;
-  background: #006400;
+  background: #cc0000;
   border-radius: 30px;
   font-size: 24px;
   line-height: 1px;
@@ -586,11 +586,11 @@ h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #006400;
+  color: #ffffff;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #006400;
+  color: #ffffff;
 }
 
 #mobile-body-overly {
@@ -696,13 +696,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-right: 8px;
   padding: 12px 13px;
   border-radius: 20px;
-  color: #ffd700;
-  background: #006400;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 #about .icon li a:hover {
-  color: #006400;
-  background: #ffd700;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 #about h3 {
@@ -715,7 +715,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about h4 {
   margin: 30px 0 15px 0;
-  color: #006400;
+  color: #ffffff;
   font-weight: 800;
   letter-spacing: 2px;
 }
@@ -819,19 +819,19 @@ body.mobile-nav-active #mobile-nav-toggle {
 #reservations input:focus,
 #reservations select:focus,
 #reservations .btn-book:focus {
-  border-color: #ffd700;
+  border-color: #cc0000;
 }
 
 #reservations .btn-book {
-  color: #ffd700;
-  background: #006400;
-  border-color: #006400;
+  color: #ffffff;
+  background: #cc0000;
+  border-color: #cc0000;
 }
 
 #reservations .btn-book:hover {
-  color: #006400;
-  background: #ffd700;
-  border-color: #ffd700;
+  color: #ffffff;
+  background: #cc0000;
+  border-color: #cc0000;
 }
 
 @media (max-width: 575.98px) {
@@ -870,7 +870,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #food-menu .single-menu h4 {
   padding: 0 15px;
-  color: #006400;
+  color: #cc0000;
   font-size: 16px;
   font-weight: 800;
   line-height: 24px;
@@ -895,14 +895,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: inline-block;
   margin: 10px 0 30px 0;
   padding: 7px 30px;
-  color: #ffd700;
-  background: #006400;
+  color: #ffffff;
+  background: #cc0000;
   border-radius: 30px;
 }
 
 #food-menu .single-menu:hover a {
-  color: #006400;
-  background: #ffd700;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 /* ================================================= */
@@ -929,7 +929,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #team h4 {
-  color: #006400;
+  color: #ffffff;
   font-weight: 800;
   letter-spacing: 2px;
   margin-bottom: 5px;
@@ -958,14 +958,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 100%;
   height: 100%;
   padding: 9px 10px;
-  color: #ffd700;
-  background: #006400;
+  color: #ffffff;
+  background: #cc0000;
   border-radius: 20px;
 }
 
 #team .icon li a:hover {
-  color: #006400;
-  background: #ffd700;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 /* ================================================= */
@@ -997,7 +997,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #testimonials i {
-  color: #006400;
+  color: #ffffff;
   font-style: italic;
 }
 
@@ -1044,7 +1044,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 22px;
   font-weight: 800;
   margin-bottom: 5px;
-  color: #006400;
+  color: #ffffff;
 }
 
 #testimonials .testimonial-item h4 {
@@ -1074,11 +1074,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #006400;
+  background: #cc0000;
 }
 
 #testimonials .owl-dot.active {
-  background: #ffd700;
+  background: #cc0000;
 }
 
 /* ================================================= */
@@ -1111,7 +1111,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #booking .booking-form input:focus,
 #booking .booking-form textarea:focus {
-  border: 1px solid #006400;
+  border: 1px solid #cc0000;
 }
 
 #booking .booking-form button[type="submit"] {
@@ -1119,14 +1119,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: none;
   padding: 8px 30px 10px 30px;
   color: #ffffff;
-  background: #006400;
+  background: #cc0000;
   transition: 0.4s;
   cursor: pointer;
   border-radius: 30px;
 }
 
 #booking .booking-form button[type="submit"]:hover {
-  background: #ffd700;
+  background: #cc0000;
 }
 
 /* ================================================= */
@@ -1154,7 +1154,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 100%;
   height: 100%;
   padding: 15px;
-  background: #006400;
+  background: #cc0000;
   border-radius: 6px;
   margin-bottom: 1px;
 }
@@ -1164,7 +1164,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 100%;
   height: 100%;
   padding: 15px;
-  background: #ffd700;
+  background: #cc0000;
   border-radius: 6px;
   margin-bottom: 0;
 }
@@ -1181,11 +1181,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 #contact .contact-hours {
   padding: 0 0 25px 0;
   margin-bottom: 25px;
-  border-bottom: 1px dotted #ffd700;
+  border-bottom: 1px dotted #cc0000;
 }
 
 #contact .contact-detail h4 {
-  color: #ffd700;
+  color: #ffffff;
   font-weight: 800;
   margin-bottom: 10px;
   letter-spacing: 2px;
@@ -1204,7 +1204,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .contact-detail a:hover {
-  color: #ffd700;
+  color: #ffffff;
 }
 
 #contact .contact-form {
@@ -1234,16 +1234,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #ffffff;
   border: none;
   padding: 8px 30px 10px 30px;
-  color: #ffd700;
-  background: #006400;
+  color: #ffffff;
+  background: #cc0000;
   transition: 0.4s;
   cursor: pointer;
   border-radius: 30px;
 }
 
 #contact .contact-form button[type="submit"]:hover {
-  color: #006400;
-  background: #ffffff;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 /* ================================================= */
@@ -1252,14 +1252,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #support {
   position: relative;
-  background: #ffd700;
+  background: #cc0000;
   text-align: center;
 }
 
 #support h1 {
   margin: 0;
   padding: 30px 0;
-  color: #006400;
+  color: #ffffff;
   font-size: 30px;
   font-weight: 800;
   line-height: 40px;
@@ -1280,7 +1280,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer {
   position: relative;
-  background: #006400;
+  background: #cc0000;
   padding: 30px 0;
   text-align: center;
 }
@@ -1372,10 +1372,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: none;
   box-shadow: none;
   padding: 6px 0;
-  color: #006400;
+  color: #ffffff;
   font-weight: 600;
   letter-spacing: 1px;
-  background: #ffd700;
+  background: #cc0000;
   transition: 0.4s;
   cursor: pointer;
   border-radius: 30px;
@@ -1415,8 +1415,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 #cart .quantity .q-btn {
   position: relative;
   display: inline-block;
-  background: #006400;
-  color: #ffd700;
+  background: #cc0000;
+  color: #ffffff;
   height: 30px;
   width: 30px;
   font-size: 19px;
@@ -1430,8 +1430,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #cart .quantity .q-btn:hover {
-  color: #006400;
-  background: #ffd700;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 #cart .quantity .dec.q-btn {
@@ -1459,15 +1459,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 30px;
   height: 30px;
   padding: 2px 9px;
-  background: #006400;
-  color: #ffd700;
+  background: #cc0000;
+  color: #ffffff;
   border-radius: 20px;
   text-align: center;
 }
 
 #cart a:hover {
-  color: #006400;
-  background: #ffd700;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 #cart .button {
@@ -1479,14 +1479,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 9px 30px;
   border: none;
   border-radius: 30px;
-  color: #ffd700;
-  background: #006400;
+  color: #ffffff;
+  background: #cc0000;
   cursor: pointer;
 }
 
 #cart .button button:hover {
-  color: #006400;
-  background: #ffd700;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 /* ================================================= */
@@ -1507,7 +1507,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #checkout .form input:focus {
-  border-color: #ffd700;
+  border-color: #ffffff;
 }
 
 #checkout .button {
@@ -1520,14 +1520,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 9px 30px;
   border: none;
   border-radius: 30px;
-  color: #ffd700;
-  background: #006400;
+  color: #ffffff;
+  background: #cc0000;
   cursor: pointer;
 }
 
 #checkout .button button:hover {
-  color: #006400;
-  background: #ffd700;
+  color: #ffffff;
+  background: #cc0000;
 }
 
 #checkout .cards {
