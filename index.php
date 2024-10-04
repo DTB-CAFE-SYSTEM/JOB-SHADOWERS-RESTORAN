@@ -1,3 +1,7 @@
+<?php
+  include('database/connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,7 +50,7 @@
   <body>
     <div class="container-xxl bg-white p-0">
       <!-- Spinner Start -->
-      <div
+      <!-- <div
         id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
       >
@@ -57,7 +61,7 @@
         >
           <span class="sr-only">Loading...</span>
         </div>
-      </div>
+      </div> -->
       <!-- Spinner End -->
 
       <!-- Navbar & Hero Start -->
@@ -84,7 +88,7 @@
               <a href="index.html" class="nav-item nav-link active">Home</a>
               <a href="about.html" class="nav-item nav-link">About</a>
               <a href="service.html" class="nav-item nav-link">Service</a>
-              <a href="menu.html" class="nav-item nav-link">Menu</a>
+              <a href="cart.php" class="nav-item nav-link">Cart</a>
               <div class="nav-item dropdown">
                 <a
                   href="#"
@@ -102,7 +106,20 @@
               </div>
               <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="Login.html" class="btn btn-primary py-2 px-4">Login</a>
+            <a href="cart.php" class="btn btn-primary py-2 px-4">Cart 
+
+            <?php
+
+              $sql = "SELECT * FROM cart";
+              $result = mysqli_query($conn,$sql);
+              $rows = mysqli_num_rows($result);
+
+              echo'
+               <span>('.$rows.')</span>
+              ';
+             ?>
+
+            </a>
           </div>
         </nav>
 
@@ -142,9 +159,7 @@
                   <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                   <h5>Master Chefs</h5>
                   <p>
-                    Abayo is a talented chef with a love for cooking and a passion for creating delicious and innovative dishes. 
-                    With years of experience in the culinary industry, Abayo has honed his skills in a variety of cuisines and cooking techniques. 
-                    She is dedicated to using only the freshest ingredients to create dishes that are both flavorful and visually appealing.
+                    Abayo is a talented chef with a love for cooking and a passion for 
                   </p>
                 </div>
               </div>
@@ -155,11 +170,7 @@
                   <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
                   <h5>Quality Food</h5>
                   <p>
-                    As a Master Chef, Abayo is committed to creating quality food that showcases the best of seasonal ingredients. She sources her ingredients from local suppliers
-                     and uses traditional cooking techniques to bring out the natural flavors of each dish. 
-                    Abayo's attention to detail and commitment to quality control ensure that every dish that leaves the kitchen meets his high standards.
-              
-                  </p>
+                    As a Master Chef, Abayo is committed to creating quality food that.
                 </div>
               </div>
             </div>
@@ -169,8 +180,7 @@
                   <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
                   <h5>Online Order</h5>
                   <p>
-                    Imagine being able to enjoy your favorite restaurant dishes from the comfort of your own office. With our online ordering system, 
-                    that's now a reality!!
+                    Imagine being able to enjoy your favorite restaurant dishes from the.
                   </p>
                 </div>
               </div>
@@ -181,10 +191,7 @@
                   <i class="fa fa-3x fa-headset text-primary mb-4"></i>
                   <h5>24/7 Service</h5>
                   <p>
-                    We understand that every guest is unique, and we strive to provide personalized service that caters to your individual needs. 
-                    Whether you have dietary restrictions or special requests, 
-                    our team will work with you to ensure that your dining experience is tailored to your preferences.
-                  </p>
+                    We understand that every guest is unique, and we strive to provide person
                 </div>
               </div>
             </div>
@@ -193,114 +200,50 @@
       </div>
       <!-- Service End -->
 
-      <!-- About Start -->
-      <div class="container-xxl py-5">
+
+      <!-- Menu Section Start -->
+      <section id="food-menu">
         <div class="container">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6">
-              <div class="row g-3">
-                <div class="col-6 text-start">
-                  <img
-                    class="img-fluid rounded w-100 wow zoomIn"
-                    data-wow-delay="0.1s"
-                    src="img/about-1.jpg"
-                  />
-                </div>
-                <div class="col-6 text-start">
-                  <img
-                    class="img-fluid rounded w-75 wow zoomIn"
-                    data-wow-delay="0.3s"
-                    src="img/about-2.jpg"
-                    style="margin-top: 25%"
-                  />
-                </div>
-                <div class="col-6 text-end">
-                  <img
-                    class="img-fluid rounded w-75 wow zoomIn"
-                    data-wow-delay="0.5s"
-                    src="img/about-3.jpg"
-                  />
-                </div>
-                <div class="col-6 text-end">
-                  <img
-                    class="img-fluid rounded w-100 wow zoomIn"
-                    data-wow-delay="0.7s"
-                    src="img/about-4.jpg"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <h5
-                class="section-title ff-secondary text-start text-primary fw-normal"
-              >
-                About Us
-              </h5>
-              <h1 class="mb-4">
-                Welcome to
-                <i class="fa fa-utensils text-primary me-2"></i>Inn n' Out
-              </h1>
-              <p class="mb-4">
-                Welcome to Inn n' Out, where the love of food and community comes together in a warm and inviting atmosphere. Our story
-                 begins with a passion for cooking and a commitment to serving our guests with exceptional hospitality.
-
-Our restaurant was born out of a desire to bring people together through food. Our chef, Abayo, grew up in a family of passionate cooks 
-and always dreamed of opening a restaurant that would become a gathering place for the community. After years of perfecting his craft, he finally found the perfect location and Inn n' Out was born.
-
-At Inn n' Out, we're committed to serving our guests with the freshest, highest-quality ingredients, sourced from local farmers and 
-suppliers whenever possible. We believe that food has the power to bring people together and create lasting memories, and we're dedicated to making every dining experience exceptional.
-
-Meet our team: Abayo, our executive chef, has been cooking for over 20 years and is passionate about creating menus that showcase 
-the best of the season. Steve, our general manager, has a background in hospitality and is dedicated to ensuring that every guest feels welcome and cared for.
-
-When you dine with us, you can expect to be treated like family. Our team is dedicated to providing exceptional service, 
-and our menu is designed to delight your taste buds. From our signature dishes to our daily specials, every meal is made with love and care.
+          <header class="section-header">
+            <h3>our delicious Food</h3>
+          </header>
+          <div class="row">
 
 
-              </p>
-              <p class="mb-4">
-                
-              </p>
-              <div class="row g-4 mb-4">
-                <div class="col-sm-6">
-                  <div
-                    class="d-flex align-items-center border-start border-5 border-primary px-3"
-                  >
-                    <h1
-                      class="flex-shrink-0 display-5 text-primary mb-0"
-                      data-toggle="counter-up"
-                    >
-                      15
-                    </h1>
-                    <div class="ps-4">
-                      <p class="mb-0">Years of</p>
-                      <h6 class="text-uppercase mb-0">Experience</h6>
+            <?php
+                   
+                   $get_product = "SELECT * FROM foods";
+                   $result = mysqli_query($conn, $get_product);
+
+                 while($row = mysqli_fetch_assoc($result)){
+
+                      $SN  = $row['SN'];
+                      $P_Name = $row['P_Name'];
+                      $P_Image = $row['P_Image'];
+                      $Price = $row['Price'];
+
+                    echo'
+                    
+                     <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="single-menu">
+                          <img class="img-fluid" src="'.$P_Image.'" />
+                          <h4>'.$P_Name.'</h4>
+                          <span>Ksh: '.$Price.'</span>
+                          <a href="add_to_cart.php?id='.$SN.'">Order Now</a>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div
-                    class="d-flex align-items-center border-start border-5 border-primary px-3"
-                  >
-                    <h1
-                      class="flex-shrink-0 display-5 text-primary mb-0"
-                      data-toggle="counter-up"
-                    >
-                      50
-                    </h1>
-                    <div class="ps-4">
-                      <p class="mb-0">Popular</p>
-                      <h6 class="text-uppercase mb-0">Master Chefs</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
-            </div>
+                    
+                    ';
+
+                 }
+
+              ?>
+  
           </div>
         </div>
-      </div>
-      <!-- About End -->
+      </section>
+      <!-- Menu Section End-->
+
 
       <!-- Menu Start -->
       <div class="container-xxl py-5">
@@ -379,8 +322,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                           <span class="text-primary">ksh 170</span>
                         </h5>
                         <small class="fst-italic"
-                          >Our vegetable rice is a flavorful and nutritious side dish made with a medley of sautéed vegetables, aromatic spices, and a hint of herbs, 
-                          carefully cooked to perfection to complement our signature dishes at Inn n' Out.</small
+                          >Our vegetable rice is a flavorful and nutritious side dish made with.</small
                         >
                       </div>
                     </div>
@@ -401,9 +343,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                           <span class="text-primary">ksh  160</span>
                         </h5>
                         <small class="fst-italic"
-                          >Our ugali is a traditional East African staple made from cornmeal, carefully cooked to a smooth and creamy consistency, 
-                          and served alongside a variety of savory sauces and stews, 
-                          offering a comforting and filling accompaniment to your meal at Inn n' Out.</small
+                          >Our ugali is a traditional East African staple made from cornmeal, carefully cooked to.</small
                         >
                       </div>
                     </div>
@@ -445,9 +385,8 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                           <span class="text-primary">ksh 300</span>
                         </h5>
                         <small class="fst-italic"
-                          >Crispy fried chicken tenders made with fresh, never frozen chicken, hand-breaded with a secret blend of spices and herbs, 
-                          and cooked to a golden crisp. 
-                          Served with a side of creamy honey mustard dipping sauce.</small
+                          >Crispy fried chicken tenders made with fresh, never frozen chicken, hand-breaded with a secret blend of
+                        </small
                         >
                       </div>
                     </div>
@@ -468,9 +407,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                           <span class="text-primary">ksh 180</span>
                         </h5>
                         <small class="fst-italic"
-                          >Pilau is a popular Swahili dish made with aromatic spices, tender meat or vegetables, and flavorful rice, often 
-                          served with a side of fresh cilantro and a squeeze of lime juice. This mouth-watering dish can be customized with various 
-                          ingredients and accompaniments, such as kachumbari.</small
+                          >Pilau is a popular Swahili dish made with aromatic spices, tender meat or vegetables, and flavorful rice.</small
                         >
                       </div>
                     </div>
@@ -492,9 +429,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                         </h5>
                         <small class="fst-italic"
                           >Mokimo is a traditional Kenyan dish made from mashed green bananas or plantains, often served 
-                          with vegetables, meat, or beans, and is a staple food in many East African countries. The dish is typically 
-                          prepared by boiling or steaming the green bananas, then mashing them with a mixture of vegetables, 
-                          spices, and sometimes meat or beans, to create a flavorful and nutritious meal.</small
+                          with vegetables,</small
                         >
                       </div>
                     </div>
@@ -514,11 +449,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                           <span>Fruit Juice</span>
                           <span class="text-primary">ksh 60</span>
                         </h5>
-                        <small class="fst-italic"
-                          >Fruit juice is a refreshing and nutritious beverage made from the extraction or pressing of juice from various fruits, 
-                          such as pineapples, apples, or mango, and can be consumed on its own or used as a base for smoothies and other drinks. Fresh fruit juice is rich in essential vitamins, minerals, 
-                          and antioxidants, making it a popular choice for those looking for a healthy and revitalizing drink option.</small
-                        >
+                        <small class="fst-italic">Fruit juice is a refreshing and nutritious beverage made from the extraction or pressing of juice from various fruits.</small>
                       </div>
                     </div>
                   </div>
@@ -537,12 +468,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                           <span>Beef</span>
                           <span class="text-primary">ksh 300</span>
                         </h5>
-                        <small class="fst-italic"
-                          >Wet fry beef, also known as "nyama choma" in Swahili, is a popular Kenyan dish made by slow-cooking beef in a flavorful stew 
-                          with a mixture of onions, tomatoes, and spices, resulting in tender and juicy meat. The dish is typically served with a side of ugali, 
-                          kachumbari, or chapati, 
-                          and is often enjoyed as a main course or snack in many East African countries.</small
-                        >
+                        <small class="fst-italic">Wet fry beef, also known as "nyama choma" in Swahili, is a popular Kenyan dish made by slow-cooking beef in a flavorful stew.</small>
                       </div>
                     </div>
                   </div>
@@ -565,10 +491,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                           <span>Omelete</span>
                           <span class="text-primary">ksh 150</span>
                         </h5>
-                        <small class="fst-italic"
-                          >An omelette is a versatile and delicious dish made from beaten eggs cooked in a pan with various fillings such as vegetables, cheese, 
-                          and meats, often folded over to create a fluffy and savory treat. Whether served as a breakfast staple, a quick snack, or a light meal, 
-                          omelettes are a popular choice worldwide due to their ease of preparation and endless possibilities for customization.</small
+                        <small class="fst-italic">An omelette is a versatile and delicious dish made from beaten eggs cooked in a pan with various fillings such as vegetables, cheese.</small
                         >
                       </div>
                     </div>
@@ -590,8 +513,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                         </h5>
                         <small class="fst-italic"
                           >Sausages are a type of savory food made from ground meat, usually pork, beef, or chicken, mixed with spices 
-                          and seasonings, stuffed into a casing, and cooked or smoked to create a flavorful and juicy snack or meal. With countless varieties and flavors available, 
-                          sausages are a staple in many cuisines around the world, often served grilled, pan-fried, or added to dishes like stews, soups, and casseroles.</small
+                          and seasonings.</small
                         >
                       </div>
                     </div>
@@ -612,9 +534,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                           <span class="text-primary">ksh 100</span>
                         </h5>
                         <small class="fst-italic"
-                          >A sandwich is a food item typically consisting of two or more slices of bread, often with fillings such as meats, cheeses, vegetables, 
-                          and condiments between them. 
-                          It's a versatile and convenient food that can be enjoyed at any time of day, whether as a quick snack, a light meal, or a satisfying lunch.</small
+                          >A sandwich is a food item typically consisting of two or more slices of bread, often with fillings such as meats, cheeses, vegetables.</small
                         >
                       </div>
                     </div>
@@ -635,8 +555,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                           <span class="text-primary">ksh 180</span>
                         </h5>
                         <small class="fst-italic"
-                          >Bacon is a type of cured and smoked pork meat, typically cut into thin strips, that is often cooked and served as a side dish, used as an ingredient in various recipes, or 
-                          added to other foods like sandwiches, salads, and breakfast dishes for its distinctive smoky flavor and crispy texture.</small
+                          >Bacon is a type of cured and smoked pork meat, typically cut into thin strips, that is often cooked and served as a side dish, used as an ingredient in various recipes, or</small
                         >
                       </div>
                     </div>
@@ -658,7 +577,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                         </h5>
                         <small class="fst-italic"
                           >A pancake is a sweet or savory flat cake made from a batter of flour, eggs, and milk, often 
-                          cooked on a griddle or frying pan and typically served hot with various toppings such as butter, syrup, fruit, or whipped cream.</small
+                          cooked on a griddle or</small
                         >
                       </div>
                     </div>
@@ -672,16 +591,12 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                         style="width: 80px"
                       />
                       <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
+                        <h5 class="d-flex justify-content-between border-bottom pb-2">
                           <span>Waffles</span>
                           <span class="text-primary">ksh 150</span>
                         </h5>
-                        <small class="fst-italic"
-                          >Waffles are a type of baked food made from a batter of flour, eggs, and milk, similar to pancakes, but cooked in a waffle iron to create 
-                          a crispy exterior and a fluffy interior, typically served hot with various 
-                          toppings such as butter, syrup, fruit, whipped cream, or fresh herbs, and often enjoyed as a breakfast or brunch item.</small
+                        <small class="fst-italic">Waffles are a type of baked food made from a batter of flour, eggs, and milk, similar to pancakes, but cooked in a waffle iron to create 
+                          a crispy exterior and a fluffy interior.</small
                         >
                       </div>
                     </div>
@@ -701,11 +616,9 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                           <span>Muffins</span>
                           <span class="text-primary">ksh 70</span>
                         </h5>
-                        <small class="fst-italic"
-                          >
-
-                        Muffins are small, baked treats that can be sweet or savory, made with a batter of flour, eggs, sugar,
-                           and baking powder. They are often flavored with ingredients like fruits, chocolate chips, or nuts and are typically enjoyed as a breakfast or snack item.
+                        <small class="fst-italic">
+                           Muffins are small, baked treats that can be sweet or savory, made with a batter of flour, eggs, sugar,
+                           and baking powder.
                           </small
                         >
                       </div>
@@ -728,7 +641,7 @@ and our menu is designed to delight your taste buds. From our signature dishes t
                         </h5>
                         <small class="fst-italic"
                           >Chicken pie is a savory dish made with a filling of chicken, vegetables, and gravy, typically enclosed in a pastry crust and baked until golden brown. 
-                          It's a comforting and satisfying meal that's popular in many parts of the world, often served hot and enjoyed as a main course or side dish.</small
+                          It's a comforting and</small
                         >
                       </div>
                     </div>
