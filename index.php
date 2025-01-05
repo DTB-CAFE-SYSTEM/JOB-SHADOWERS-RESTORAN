@@ -90,12 +90,12 @@
               <a href="service.html" class="nav-item nav-link">Service</a>
               <a href="cart.php" class="nav-item nav-link">Cart</a>
               <div class="nav-item dropdown">
-                <a
+                <!-- <a
                   href="#"
                   class="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                   >Pages</a
-                >
+                > -->
                 <div class="dropdown-menu m-0">
                   <a href="booking.html" class="dropdown-item">Booking</a>
                   <a href="team.html" class="dropdown-item">Our Team</a>
@@ -246,7 +246,7 @@
 
 
       <!-- Menu Start -->
-      <div class="container-fluid py-5">
+      <!-- <div class="container-fluid py-5">
         <div class="container">
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h5
@@ -823,7 +823,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Menu End -->
       
       <!-- Reservation Start -->
@@ -981,7 +981,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
       <!-- Reservation End -->
 
       <!-- Team Start -->
-      <div class="container-fluid pt-5 pb-3">
+      <!-- <div class="container-fluid pt-5 pb-3">
         <div class="container">
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h5
@@ -1074,11 +1074,11 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Team End -->
 
       <!-- Testimonial Start -->
-      <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
           <div class="text-center">
             <h5
@@ -1167,7 +1167,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Testimonial End -->
 
       <!-- Footer Start -->

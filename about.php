@@ -59,9 +59,9 @@
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link active">About</a>
                         <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
+                        <!-- <a href="menu.html" class="nav-item nav-link">Menu</a> -->
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a> -->
                             <div class="dropdown-menu m-0">
                                 <a href="booking.html" class="dropdown-item">Booking</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
@@ -120,19 +120,12 @@
                             Welcome to Inn n' Out, where the love of food and community comes together in a warm and inviting atmosphere. Our story
                              begins with a passion for cooking and a commitment to serving our guests with exceptional hospitality.
             
-            Our restaurant was born out of a desire to bring people together through food. Our chef, Abayo, grew up in a family of passionate cooks 
-            and always dreamed of opening a restaurant that would become a gathering place for the community. After years of perfecting his craft, he finally found the perfect location and Inn n' Out was born.
+            Our restaurant was born out of a desire to bring people together through food. 
             
             At Inn n' Out, we're committed to serving our guests with the freshest, highest-quality ingredients, sourced from local farmers and 
             suppliers whenever possible. We believe that food has the power to bring people together and create lasting memories, and we're dedicated to making every dining experience exceptional.
             
-            Meet our team: Abayo, our executive chef, has been cooking for over 20 years and is passionate about creating menus that showcase 
-            the best of the season. Steve, our general manager, has a background in hospitality and is dedicated to ensuring that every guest feels welcome and cared for.
-            
-            When you dine with us, you can expect to be treated like family. Our team is dedicated to providing exceptional service, 
-            and our menu is designed to delight your taste buds. From our signature dishes to our daily specials, every meal is made with love and care.
-            
-            
+           
                           </p>
                         <div class="row g-4 mb-4">
                             <div class="col-sm-6">

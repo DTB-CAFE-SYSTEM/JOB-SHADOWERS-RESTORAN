@@ -112,12 +112,12 @@ include('database/connect.php');
               <a href="service.php" class="nav-item nav-link">Service</a>
               <a href="cart.php" class="nav-item nav-link active">Cart</a>
               <div class="nav-item dropdown">
-                <a
+                <!-- <a
                   href="#"
                   class="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                   >Pages</a
-                >
+                > -->
                 <div class="dropdown-menu m-0">
                   <a href="booking.html" class="dropdown-item">Booking</a>
                   <a href="team.html" class="dropdown-item">Our Team</a>
