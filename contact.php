@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Inn n' Out</title>
+    <title>Springs f' Olives</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -47,7 +47,7 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Inn n' Out</h1>
+                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Springs f' Olives</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -101,15 +101,15 @@
                         <div class="row gy-4">
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">Booking</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@Innn'out@gmail.com</p>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@Springsf'Olives@gmail.com</p>
                             </div>
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">General</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@Innn'out@gmail.com</p>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@Springsf'Olives@gmail.com</p>
                             </div>
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">Technical</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@Innn'out@gmail.com</p>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@Springsf'Olives@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -176,7 +176,7 @@
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Along Mombasa road, opposite Airtel HQ</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+254721706997</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@Innn'out@gmail.com</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@Springsf'Olives@gmail.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -205,7 +205,7 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Inn n' out</a>, All Right Reserved. 
+                            &copy; <a class="border-bottom" href="#">Springs f' Olives</a>, All Right Reserved. 
 							
 							
 							Designed By <a class="border-bottom" href="">IT job shadowing team</a>

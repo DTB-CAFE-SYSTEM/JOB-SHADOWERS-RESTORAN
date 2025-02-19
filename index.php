@@ -1,9 +1,15 @@
 <?php
-  include('database/connect.php');
-?>
 
-<!DOCTYPE html>
-<html lang="en">
+session_start();
+if(!isset($_SESSION['user'])){
+    header('location: index.php');
+}
+
+include('database/connect.php');
+
+?>
+<!DOCTYPE php>
+<php lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Springs of olive DTB  Restaurant</title>
@@ -49,20 +55,7 @@
 
   <body>
     <div class="container-fluid bg-white p-0">
-      <!-- Spinner Start -->
-      <!-- <div
-        id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-      >
-        <div
-          class="spinner-border text-primary"
-          style="width: 3rem; height: 3rem"
-          role="status"
-        >
-          <span class="sr-only">Loading...</span>
-        </div>
-      </div> -->
-      <!-- Spinner End -->
+    
 
       <!-- Navbar & Hero Start -->
       <div class="container-fluid position-relative p-0">
@@ -71,7 +64,7 @@
         >
           <a href="" class="navbar-brand p-0">
             <h1 class="text-primary m-0">
-              <i class="fa fa-utensils me-3"></i>Inn n' Out
+              <i class="fa fa-utensils me-3"></i>Springs f' Olives
             </h1>
             <!-- <img src="img/logo.png" alt="Logo"> -->
           </a>
@@ -85,9 +78,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 pe-4">
-              <a href="index.html" class="nav-item nav-link active">Home</a>
-              <a href="about.html" class="nav-item nav-link">About</a>
-              <a href="service.html" class="nav-item nav-link">Service</a>
+              <a href="index.php" class="nav-item nav-link active">Home</a>
+              <a href="about.php" class="nav-item nav-link">About</a>
+              <a href="service.php" class="nav-item nav-link">Service</a>
               <a href="cart.php" class="nav-item nav-link">Cart</a>
               <div class="nav-item dropdown">
                 <!-- <a
@@ -97,14 +90,14 @@
                   >Pages</a
                 > -->
                 <div class="dropdown-menu m-0">
-                  <a href="booking.html" class="dropdown-item">Booking</a>
-                  <a href="team.html" class="dropdown-item">Our Team</a>
-                  <a href="testimonial.html" class="dropdown-item"
+                  <a href="booking.php" class="dropdown-item">Booking</a>
+                  <a href="team.php" class="dropdown-item">Our Team</a>
+                  <a href="testimonial.php" class="dropdown-item"
                     >Testimonial</a
                   >
                 </div>
               </div>
-              <a href="contact.html" class="nav-item nav-link">Contact</a>
+              <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
             <a href="cart.php" class="btn btn-primary py-2 px-4">Cart 
 
@@ -131,11 +124,11 @@
                   Enjoy Our<br />Delicious Meal
                 </h1>
                 <p class="text-white animated slideInLeft mb-4 pb-2">
-                  Welcome to Inn n' Out, where we're passionate about serving up delicious kenyan food in a warm and inviting atmosphere. 
+                  Welcome to Springs f' Olives, where we're passionate about serving up delicious kenyan food in a warm and inviting atmosphere. 
                   Our chefs use only the freshest ingredients to craft dishes that are both flavorful and visually stunning.
                 </p>
                 <a
-                  href="Login.html"
+                  href="Login.php"
                   class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft"
                   >BOOK A TABLE</a
                 >
@@ -209,624 +202,76 @@
           </header>
           <div class="row">
 
+<?php
+$get_product = "SELECT * FROM foods";
+$result = mysqli_query($conn, $get_product);
 
-            <?php
-                   
-                   $get_product = "SELECT * FROM foods";
-                   $result = mysqli_query($conn, $get_product);
+while($row = mysqli_fetch_assoc($result)){
 
-                 while($row = mysqli_fetch_assoc($result)){
+    $SN  = $row['SN'];
+    $P_Name = $row['P_Name'];
+    $P_Image = $row['P_Image'];
+    $Price = $row['Price'];
 
-                      $SN  = $row['SN'];
-                      $P_Name = $row['P_Name'];
-                      $P_Image = $row['P_Image'];
-                      $Price = $row['Price'];
+    echo '
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="single-menu" style="
+                background: #fff;
+                border-radius: 10px;
+                padding: 15px;
+                text-align: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease-in-out;">
+                
+                <!-- Product Image with Fixed Size -->
+                <img src="'.$P_Image.'" style="
+                    width: 100%;
+                    height: 200px; 
+                    object-fit: cover; 
+                    border-radius: 8px;" />
 
-                    echo'
-                    
-                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="single-menu">
-                          <img class="img-fluid" src="'.$P_Image.'" />
-                          <h4>'.$P_Name.'</h4>
-                          <span>Ksh: '.$Price.'</span>
-                          <a href="add_to_cart.php?id='.$SN.'">Order Now</a>
-                        </div>
-                    </div>
-                    
-                    ';
+                <!-- Product Name Styling -->
+                <h4 style="
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #333;
+                    margin: 10px 0;">
+                    '.$P_Name.'
+                </h4>
 
-                 }
+                <!-- Product Price Styling -->
+                <span style="
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #007bff;
+                    display: block;
+                    margin-bottom: 10px;">
+                    Ksh: '.$Price.'
+                </span>
 
-              ?>
+                <!-- Order Now Button -->
+                <a href="add_to_cart.php?id='.$SN.'" style="
+                    display: inline-block;
+                    padding: 10px 15px;
+                    background: #dc3545;
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: bold;
+                    border-radius: 5px;
+                    transition: background 0.3s ease-in-out;">
+                    Order Now
+                </a>
+            </div>
+        </div>
+    ';
+}
+?>
+
   
           </div>
         </div>
       </section>
-      <!-- Menu Section End-->
-
-
-      <!-- Menu Start -->
-      <!-- <div class="container-fluid py-5">
-        <div class="container">
-          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5
-              class="section-title ff-secondary text-center text-primary fw-normal"
-            >
-              Food Menu
-            </h5>
-            <h1 class="mb-5">Most Popular Items</h1>
-          </div>
-          <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-            <ul
-              class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5"
-            >
-              <li class="nav-item">
-                <a
-                  class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active"
-                  data-bs-toggle="pill"
-                  href="#tab-1"
-                >
-                  
-                  <i class="fa fa-hamburger fa-2x text-primary"></i>
-                  <div class="ps-3">
-                    <small class="text-body">Special</small>
-                    <h6 class="mt-n1 mb-0">Brunch</h6>
-                  </div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="d-flex align-items-center text-start mx-3 pb-3"
-                  data-bs-toggle="pill"
-                  href="#tab-2"
-                >
-                  
-                
-                  <i class="fa fa-coffee fa-2x text-primary"></i>
-                  <div class="ps-3">
-                    <small class="text-body">Popular</small>
-                    <h6 class="mt-n1 mb-0">Breakfast</h6>
-                  </div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="d-flex align-items-center text-start mx-3 me-0 pb-3"
-                  data-bs-toggle="pill"
-                  href="#tab-3"
-                >
-                  <i class="fa fa-utensils fa-2x text-primary"></i>
-                  <div class="ps-3">
-                    <small class="text-body">Gen-Z</small>
-                    <h6 class="mt-n1 mb-0">combos</h6>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <div class="tab-content">
-              <div id="tab-1" class="tab-pane fade show p-0 active">
-                <div class="row g-4">
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-1.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Vegetable Rice</span>
-                          <span class="text-primary">ksh 170</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Our vegetable rice is a flavorful and nutritious side dish made with.</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-2.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>ugali</span>
-                          <span class="text-primary">ksh  160</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Our ugali is a traditional East African staple made from cornmeal, carefully cooked to.</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-3.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>French fries</span>
-                          <span class="text-primary">ksh 200</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Thick-cut and cooked twice for extra crunch</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-4.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Chicken</span>
-                          <span class="text-primary">ksh 300</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Crispy fried chicken tenders made with fresh, never frozen chicken, hand-breaded with a secret blend of
-                        </small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-5.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Pilau</span>
-                          <span class="text-primary">ksh 180</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Pilau is a popular Swahili dish made with aromatic spices, tender meat or vegetables, and flavorful rice.</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-6.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Mokimo</span>
-                          <span class="text-primary">ksh 150</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Mokimo is a traditional Kenyan dish made from mashed green bananas or plantains, often served 
-                          with vegetables,</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-7.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Fruit Juice</span>
-                          <span class="text-primary">ksh 60</span>
-                        </h5>
-                        <small class="fst-italic">Fruit juice is a refreshing and nutritious beverage made from the extraction or pressing of juice from various fruits.</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-8.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Beef</span>
-                          <span class="text-primary">ksh 300</span>
-                        </h5>
-                        <small class="fst-italic">Wet fry beef, also known as "nyama choma" in Swahili, is a popular Kenyan dish made by slow-cooking beef in a flavorful stew.</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="tab-2" class="tab-pane fade show p-0">
-                <div class="row g-4">
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-1.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Omelete</span>
-                          <span class="text-primary">ksh 150</span>
-                        </h5>
-                        <small class="fst-italic">An omelette is a versatile and delicious dish made from beaten eggs cooked in a pan with various fillings such as vegetables, cheese.</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-2.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Sausage</span>
-                          <span class="text-primary">ksh 80</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Sausages are a type of savory food made from ground meat, usually pork, beef, or chicken, mixed with spices 
-                          and seasonings.</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-3.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Sandwitch</span>
-                          <span class="text-primary">ksh 100</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >A sandwich is a food item typically consisting of two or more slices of bread, often with fillings such as meats, cheeses, vegetables.</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-4.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Bacon</span>
-                          <span class="text-primary">ksh 180</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Bacon is a type of cured and smoked pork meat, typically cut into thin strips, that is often cooked and served as a side dish, used as an ingredient in various recipes, or</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-5.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Pancake </span>
-                          <span class="text-primary">ksh 120</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >A pancake is a sweet or savory flat cake made from a batter of flour, eggs, and milk, often 
-                          cooked on a griddle or</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-6.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                          <span>Waffles</span>
-                          <span class="text-primary">ksh 150</span>
-                        </h5>
-                        <small class="fst-italic">Waffles are a type of baked food made from a batter of flour, eggs, and milk, similar to pancakes, but cooked in a waffle iron to create 
-                          a crispy exterior and a fluffy interior.</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-7.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Muffins</span>
-                          <span class="text-primary">ksh 70</span>
-                        </h5>
-                        <small class="fst-italic">
-                           Muffins are small, baked treats that can be sweet or savory, made with a batter of flour, eggs, sugar,
-                           and baking powder.
-                          </small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-8.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Chicken Pie</span>
-                          <span class="text-primary">ksh 300</span>
-                        </h5>
-                        <small class="fst-italic"
-                          >Chicken pie is a savory dish made with a filling of chicken, vegetables, and gravy, typically enclosed in a pastry crust and baked until golden brown. 
-                          It's a comforting and</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="tab-3" class="tab-pane fade show p-0">
-                <div class="row g-4">
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-1.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>ugali ft beef</span>
-                          <span class="text-primary">ksh 180</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-2.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Chapati ft beef</span>
-                          <span class="text-primary">ksh 370</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-3.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Rice ft mutton</span>
-                          <span class="text-primary">ksh 280</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-4.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Mukimo ft Beef</span>
-                          <span class="text-primary">ksh 200</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-5.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Pilau ft kachumbari</span>
-                          <span class="text-primary">ksh 250</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-6.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>chapati ft beans</span>
-                          <span class="text-primary">250</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-7.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>Smocha ft fruit juice</span>
-                          <span class="text-primary">ksh 180</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="d-flex align-items-center">
-                      <img
-                        class="flex-shrink-0 img-fluid rounded"
-                        src="img/menu-8.jpg"
-                        alt=""
-                        style="width: 80px"
-                      />
-                      <div class="w-100 d-flex flex-column text-start ps-4">
-                        <h5
-                          class="d-flex justify-content-between border-bottom pb-2"
-                        >
-                          <span>biryani ft beef stew</span>
-                          <span class="text-primary">ksh 400</span>
-                        </h5>
-                        <small class="fst-italic"
-                          ></small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- Menu End -->
-      
-      <!-- Reservation Start -->
+     
 <div class="container-fluid py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
   <div class="row g-0">
     <div class="col-md-6">
@@ -978,199 +423,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
 });
 </script>
       
-      <!-- Reservation End -->
-
-      <!-- Team Start -->
-      <!-- <div class="container-fluid pt-5 pb-3">
-        <div class="container">
-          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5
-              class="section-title ff-secondary text-center text-primary fw-normal"
-            >
-              Team Members
-            </h5>
-            <h1 class="mb-5">Our Master Chefs</h1>
-          </div>
-          <div class="row g-4">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="team-item text-center rounded overflow-hidden">
-                <div class="rounded-circle overflow-hidden m-4">
-                  <img class="img-fluid" src="img/team-1.jpg" alt="" />
-                </div>
-                <h5 class="mb-0">Abayo Elizabeth</h5>
-                <small>Designation - Head chef</small>
-                <div class="d-flex justify-content-center mt-3">
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-              <div class="team-item text-center rounded overflow-hidden">
-                <div class="rounded-circle overflow-hidden m-4">
-                  <img class="img-fluid" src="img/team-2.jpg" alt="" />
-                </div>
-                <h5 class="mb-0">Caleb Odinga</h5>
-                <small>Designation - Master chef</small>
-                <div class="d-flex justify-content-center mt-3">
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-              <div class="team-item text-center rounded overflow-hidden">
-                <div class="rounded-circle overflow-hidden m-4">
-                  <img class="img-fluid" src="img/team-3.jpg" alt="" />
-                </div>
-                <h5 class="mb-0">Ida Ngina</h5>
-                <small>Designation - Pastry Chef</small>
-                <div class="d-flex justify-content-center mt-3">
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-              <div class="team-item text-center rounded overflow-hidden">
-                <div class="rounded-circle overflow-hidden m-4">
-                  <img class="img-fluid" src="img/team-4.jpg" alt="" />
-                </div>
-                <h5 class="mb-0">Wesley Waweru</h5>
-                <small>Designation - Line cook</small>
-                <div class="d-flex justify-content-center mt-3">
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a class="btn btn-square btn-primary mx-1" href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- Team End -->
-
-      <!-- Testimonial Start -->
-      <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-          <div class="text-center">
-            <h5
-              class="section-title ff-secondary text-center text-primary fw-normal"
-            >
-              Testimonial
-            </h5>
-            <h1 class="mb-5">Our Clients Say!!!</h1>
-          </div>
-          <div class="owl-carousel testimonial-carousel">
-            <div class="testimonial-item bg-transparent border rounded p-4">
-              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-              <p>
-                I've been to many fine dining restaurants in my life, but none have compared to the exceptional service and cuisine at Inn n' Out. 
-                The attention to detail and personalized care from the staff made our anniversary dinner truly unforgettable. We can't wait to come back!
-              </p>
-              <div class="d-flex align-items-center">
-                <img
-                  class="img-fluid flex-shrink-0 rounded-circle"
-                  src="img/testimonial-1.jpg"
-                  style="width: 50px; height: 50px"
-                />
-                <div class="ps-3">
-                  <h5 class="mb-1">Caroline Mugo</h5>
-                  <small>Human Resource manager</small>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-              <p>
-                I'm a foodie at heart, and I was blown away by the creativity and flavors of the dishes at Inn n' Out. The chef's table experience was
-                 a highlight of my year, and I've already recommended it to all my friends. 
-            
-                
-                The atmosphere is cozy and intimate, perfect for a night out with friends or a romantic evening
-              </p>
-              <div class="d-flex align-items-center">
-                <img
-                  class="img-fluid flex-shrink-0 rounded-circle"
-                  src="img/testimonial-2.jpg"
-                  style="width: 50px; height: 50px"
-                />
-                <div class="ps-3">
-                  <h5 class="mb-1">James Mwangi</h5>
-                  <small>CIDO</small>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-              <p>
-                As a vegetarian, I often find myself limited by menu options. But Inn n' Out went above and beyond to accommodate my dietary needs. 
-                The seasonal vegetable tart was to die for, and the staff were knowledgeable and friendly. I've found my new favorite spot!
-              </p>
-              <div class="d-flex align-items-center">
-                <img
-                  class="img-fluid flex-shrink-0 rounded-circle"
-                  src="img/testimonial-3.jpg"
-                  style="width: 50px; height: 50px"
-                />
-                <div class="ps-3">
-                  <h5 class="mb-1">Nancy Muriuki</h5>
-                  <small> IT dept</small>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-              <p>
-                I was skeptical about trying a new restaurant for our company's holiday party, but Inn n' Out exceeded all expectations. 
-                The private dining room was beautifully decorated, 
-                and the service was top-notch. Our team had an amazing time, and the food was incredible. We'll be back next year
-              </p>
-              <div class="d-flex align-items-center">
-                <img
-                  class="img-fluid flex-shrink-0 rounded-circle"
-                  src="img/testimonial-4.jpg"
-                  style="width: 50px; height: 50px"
-                />
-                <div class="ps-3">
-                  <h5 class="mb-1">Lilian Ngala</h5>
-                  <small>Human Resource manager</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- Testimonial End -->
-
-      <!-- Footer Start -->
+      
       <div
         class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
         data-wow-delay="0.1s"
@@ -1203,7 +456,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
                 <i class="fa fa-phone-alt me-3"></i> +254 721706997
               </p>
               <p class="mb-2">
-                <i class="fa fa-envelope me-3"></i>info@Innn'out@gmail.com
+                <i class="fa fa-envelope me-3"></i>info@Springsf'Olives@gmail.com
       
               </p>
               <div class="d-flex pt-2">
@@ -1245,7 +498,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
                   type="text"
                   placeholder="Your email"
                 />
-                <a href="Signup.html">
+                <a href="Signup.php">
                   <button
                     type="button"
                     class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
@@ -1261,10 +514,10 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
           <div class="copyright">
             <div class="row">
               <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="#">Inn n' Out</a>, All
+                &copy; <a class="border-bottom" href="#">Springs f' Olives</a>, All
                 Right Reserved.
 
-                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://phpcodex.com/credit-removal". Thank you for your support. ***/-->
                 Designed By
                 <a class="border-bottom" href=""
                   >IT job shadowing team</a
@@ -1305,4 +558,4 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
   </body>
-</html>
+</php>

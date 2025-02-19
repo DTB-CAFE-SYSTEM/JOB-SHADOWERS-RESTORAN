@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,76 +10,76 @@
 </head>
 
 <body>
-    <!--Login-->
-    <div class="login-wrapper d-flex justify-content-center align-items-center vh-100">
-        <div class="container login-container d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
-                <h1 class="text-center mb-4">Login</h1>
-                <!--Login Form-->
-                <form id="loginForm">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                    </div>
-                    <div class="signup-link mt-3 text-center">
-                        <a href="#">Forgot Password?</a>
-                    </div>
-                    <!--Login Button-->
-                    <button type="submit" class="btn login-btn mt-3 w-100">Login</button>
-                    <!--Signup Link-->
-                    <div class="signup-link mt-3 text-center">
-                        Don't have an Account? <a href="Signup.html">Signup</a>
-                    </div>
-                </form>
-            </div>
+
+<!-- PHP LOGIN LOGIC -->
+<?php
+session_start();
+include('database/connect.php');
+
+
+
+
+
+if(isset($_POST['submit'])) {
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = mysqli_real_escape_string($conn, $_POST['password']);
+
+    $sql = "SELECT * FROM admins WHERE Email = '$email'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_num_rows($result);
+
+    if($row > 0) {
+        $user = mysqli_fetch_assoc($result);
+        $stored_password = $user['Pass']; 
+        $user_id = $user['SN'];
+
+        if ($pass != $stored_password) {
+            $error_message = "<div class='alert alert-danger text-center'>Incorrect Password! Please try again.</div>";
+        } else {
+            $_SESSION['user'] = $email;
+            $_SESSION['user_id'] = $user_id;
+            header("Location: dashboard.php");
+            exit();
+        }
+    } else {
+        $error_message = "<div class='alert alert-danger text-center'>Incorrect Email Address! Try again.</div>";
+    }
+}
+?>
+
+<!-- Login Form -->
+<div class="login-wrapper d-flex justify-content-center align-items-center vh-100">
+    <div class="container login-container d-flex justify-content-center align-items-center">
+        <div class="col-md-6">
+            <h1 class="text-center mb-4">Login</h1>
+
+            <?php if(isset($error_message)) echo $error_message; ?>
+
+            <form action="" method="POST">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="signup-link mt-3 text-center">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <!-- Login Button -->
+                <button type="submit" name="submit" class="btn login-btn mt-3 w-100">Login</button>
+                <!-- Signup Link -->
+                <div class="signup-link mt-3 text-center">
+                    Don't have an Account? <a href="Signup.html">Signup</a>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', async function (e) {
-            e.preventDefault();  // Prevent the form from reloading the page
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-            // Get form values
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Prepare the data to send to the backend
-            const data = {
-                username: username,
-                password: password
-            };
-
-            try {
-                const response = await fetch('/http://localhost:5000/login', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                const result = await response.json();
-
-                if (response.ok) {
-                    alert(result.message);  // Show success message
-                    // You can redirect to another page or dashboard here
-                    window.location.href = "menu.html";
-                } else {
-                    alert(result.error);  // Show error message
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('An error occurred. Please try again.');
-            }
-        });
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
-
 </html>
-
