@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Inn n' Out</title>
+    <title>Springs f' Olives
+</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -47,7 +48,8 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Inn n' Out</h1>
+                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Springs f' Olives
+</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -134,7 +136,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="text-primary text-uppercase mb-2">// Our Services</p>
                     <h1 class="display-6 mb-4">What Do We Offer For You?</h1>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <p class="mb-5">At Springs f' Olives, we take pride in offering exceptional culinary experiences that bring people together. From high-quality ingredients to personalized service, we ensure that every meal is a delightful experience.</p>
                     <div class="row gy-5 gx-4">
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="d-flex align-items-center mb-3">
@@ -143,7 +145,7 @@
                                 </div>
                                 <h5 class="mb-0">Quality Products</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>We source the freshest and finest ingredients , ensuring every dish is crafted with care and authenticity.</span>
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
                             <div class="d-flex align-items-center mb-3">
@@ -152,7 +154,7 @@
                                 </div>
                                 <h5 class="mb-0">Custom Products</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>Looking for something special? We cater to personalized requests, ensuring a tailored dining experience just for you.</span>
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                             <div class="d-flex align-items-center mb-3">
@@ -161,7 +163,7 @@
                                 </div>
                                 <h5 class="mb-0">Online Order</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>Convenience at your fingertips! </span>
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
                             <div class="d-flex align-items-center mb-3">
@@ -170,7 +172,7 @@
                                 </div>
                                 <h5 class="mb-0">Home Delivery</h5>
                             </div>
-                            <span>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</span>
+                            <span>Bringing our flavors straight to your doorstep! </span>
                         </div>
                     </div>
                 </div>

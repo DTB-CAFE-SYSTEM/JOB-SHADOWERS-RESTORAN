@@ -93,7 +93,7 @@ include('database/connect.php');
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
           <a href="" class="navbar-brand p-0">
             <h1 class="text-primary m-0">
-              <i class="fa fa-utensils me-3"></i>Inn n Out
+              <i class="fa fa-utensils me-3"></i>Springs f' Olives
             </h1>
             <!-- <img src="img/logo.png" alt="Logo"> -->
           </a>
@@ -382,7 +382,7 @@ include('database/connect.php');
               >
                 Newsletter
               </h4>
-              <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+              <p>For queries</p>
               <div class="position-relative mx-auto" style="max-width: 400px">
                 <input
                   class="form-control border-primary w-100 py-3 ps-4 pe-5"
@@ -403,13 +403,13 @@ include('database/connect.php');
           <div class="copyright">
             <div class="row">
               <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All
+                &copy; <a class="border-bottom" href="#">Springs f' Olives</a>, All
                 Right Reserved.
 
                 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                 Designed By
                 <a class="border-bottom" href="https://htmlcodex.com"
-                  >HTML Codex</a
+                  > IT job shadowing team</a
                 >
               </div>
               <div class="col-md-6 text-center text-md-end">
