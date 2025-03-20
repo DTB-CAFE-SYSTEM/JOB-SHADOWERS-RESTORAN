@@ -603,11 +603,4 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
     <script src="js/main.js"></script>
   </body>
 
-
-
-
-  <?php
-
-
-
-?>
+</html>

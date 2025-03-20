@@ -53,7 +53,7 @@ include('databases/connect.php');
                           $sql = "SELECT * FROM users";
                           $result = mysqli_query($conn, $sql);
                           $admin = mysqli_fetch_assoc($result);
-                          $admin_name = $admin["F_Name"];
+                          $admin_name = $admin["First_Name"];
 
                           echo '
                           
@@ -270,14 +270,14 @@ include('databases/connect.php');
                       <h3>Total Sales</h3>
                       
                     <?php
-                      $sql = "SELECT  SUM(Price) FROM sales as Total_Price";
+                      $sql = "SELECT SUM(Price) AS Total_Price FROM sales";
                       $result = mysqli_query($conn, $sql);
                       $total_sales = mysqli_fetch_assoc($result);
                       $sum = $total_sales['Total_Price'];
                   
 
                       echo'
-                              <h1>'.$sum.'</h1>
+                              <h1>'.$sum.'/=</h1>
                       
                         ';
                       ?>

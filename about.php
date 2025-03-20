@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>INN N'OUT</title>
+    <title>Springs f' Olives</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -47,7 +47,7 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Inn n' Out
+                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Springs f' Olives
         </h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
@@ -58,10 +58,10 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link active">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
+                        <a href="service.php" class="nav-item nav-link">Service</a>
+                        <!-- <a href="menu.html" class="nav-item nav-link">Menu</a> -->
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a> -->
                             <div class="dropdown-menu m-0">
                                 <a href="booking.html" class="dropdown-item">Booking</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
@@ -97,16 +97,16 @@
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img2/menu-8.jpg">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img2/menu-2.jpg" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img2/menu-3.jpg">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img2/menu-4.jpg">
                             </div>
                         </div>
                     </div>
@@ -114,25 +114,18 @@
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
                         <h1 class="mb-4">
                             Welcome to
-                            <i class="fa fa-utensils text-primary me-2"></i>Inn n' Out
+                            <i class="fa fa-utensils text-primary me-2"></i>Springs f' Olives
                           </h1>
                           <p class="mb-4">
-                            Welcome to Inn n' Out, where the love of food and community comes together in a warm and inviting atmosphere. Our story
+                            Welcome to Springs f' Olives, where the love of food and community comes together in a warm and inviting atmosphere. Our story
                              begins with a passion for cooking and a commitment to serving our guests with exceptional hospitality.
             
-            Our restaurant was born out of a desire to bring people together through food. Our chef, Abayo, grew up in a family of passionate cooks 
-            and always dreamed of opening a restaurant that would become a gathering place for the community. After years of perfecting his craft, he finally found the perfect location and Inn n' Out was born.
+            Our restaurant was born out of a desire to bring people together through food. 
             
-            At Inn n' Out, we're committed to serving our guests with the freshest, highest-quality ingredients, sourced from local farmers and 
+            At Springs f' Olives, we're committed to serving our guests with the freshest, highest-quality ingredients, sourced from local farmers and 
             suppliers whenever possible. We believe that food has the power to bring people together and create lasting memories, and we're dedicated to making every dining experience exceptional.
             
-            Meet our team: Abayo, our executive chef, has been cooking for over 20 years and is passionate about creating menus that showcase 
-            the best of the season. Steve, our general manager, has a background in hospitality and is dedicated to ensuring that every guest feels welcome and cared for.
-            
-            When you dine with us, you can expect to be treated like family. Our team is dedicated to providing exceptional service, 
-            and our menu is designed to delight your taste buds. From our signature dishes to our daily specials, every meal is made with love and care.
-            
-            
+           
                           </p>
                         <div class="row g-4 mb-4">
                             <div class="col-sm-6">
@@ -162,103 +155,7 @@
         <!-- About End -->
 
 
-        <!-- Team Start -->
-        <div class="container-xxl pt-5 pb-3">
-            <div class="container">
-              <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h5
-                  class="section-title ff-secondary text-center text-primary fw-normal"
-                >
-                  Team Members
-                </h5>
-                <h1 class="mb-5">Our Master Chefs</h1>
-              </div>
-              <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                  <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                      <img class="img-fluid" src="img/team-1.jpg" alt="" />
-                    </div>
-                    <h5 class="mb-0">Abayo Elizabeth</h5>
-                    <small>Designation - Head chef</small>
-                    <div class="d-flex justify-content-center mt-3">
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-facebook-f"></i
-                      ></a>
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-twitter"></i
-                      ></a>
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-instagram"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                  <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                      <img class="img-fluid" src="img/team-2.jpg" alt="" />
-                    </div>
-                    <h5 class="mb-0">Caleb Odinga</h5>
-                    <small>Designation - Master chef</small>
-                    <div class="d-flex justify-content-center mt-3">
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-facebook-f"></i
-                      ></a>
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-twitter"></i
-                      ></a>
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-instagram"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                  <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                      <img class="img-fluid" src="img/team-3.jpg" alt="" />
-                    </div>
-                    <h5 class="mb-0">Ida Ngina</h5>
-                    <small>Designation - Pastry Chef</small>
-                    <div class="d-flex justify-content-center mt-3">
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-facebook-f"></i
-                      ></a>
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-twitter"></i
-                      ></a>
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-instagram"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                  <div class="team-item text-center rounded overflow-hidden">
-                    <div class="rounded-circle overflow-hidden m-4">
-                      <img class="img-fluid" src="img/team-4.jpg" alt="" />
-                    </div>
-                    <h5 class="mb-0">Wesley Waweru</h5>
-                    <small>Designation - Line cook</small>
-                    <div class="d-flex justify-content-center mt-3">
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-facebook-f"></i
-                      ></a>
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-twitter"></i
-                      ></a>
-                      <a class="btn btn-square btn-primary mx-1" href=""
-                        ><i class="fab fa-instagram"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Team End -->
-    
+        
           <!-- Testimonial Start -->
           <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
@@ -274,7 +171,7 @@
                 <div class="testimonial-item bg-transparent border rounded p-4">
                   <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                   <p>
-                    I've been to many fine dining restaurants in my life, but none have compared to the exceptional service and cuisine at Inn n' Out. 
+                    I've been to many fine dining restaurants in my life, but none have compared to the exceptional service and cuisine at Springs f' Olives. 
                     The attention to detail and personalized care from the staff made our anniversary dinner truly unforgettable. We can't wait to come back!
                   </p>
                   <div class="d-flex align-items-center">
@@ -292,7 +189,7 @@
                 <div class="testimonial-item bg-transparent border rounded p-4">
                   <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                   <p>
-                    I'm a foodie at heart, and I was blown away by the creativity and flavors of the dishes at Inn n' Out. The chef's table experience was
+                    I'm a foodie at heart, and I was blown away by the creativity and flavors of the dishes at Springs f' Olives. The chef's table experience was
                      a highlight of my year, and I've already recommended it to all my friends. 
                 
                     
@@ -313,7 +210,7 @@
                 <div class="testimonial-item bg-transparent border rounded p-4">
                   <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                   <p>
-                    As a vegetarian, I often find myself limited by menu options. But Inn n' Out went above and beyond to accommodate my dietary needs. 
+                    As a vegetarian, I often find myself limited by menu options. But Springs f' Olives went above and beyond to accommodate my dietary needs. 
                     The seasonal vegetable tart was to die for, and the staff were knowledgeable and friendly. I've found my new favorite spot!
                   </p>
                   <div class="d-flex align-items-center">
@@ -331,7 +228,7 @@
                 <div class="testimonial-item bg-transparent border rounded p-4">
                   <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                   <p>
-                    I was skeptical about trying a new restaurant for our company's holiday party, but Inn n' Out exceeded all expectations. 
+                    I was skeptical about trying a new restaurant for our company's holiday party, but Springs f' Olives exceeded all expectations. 
                     The private dining room was beautifully decorated, 
                     and the service was top-notch. Our team had an amazing time, and the food was incredible. We'll be back next year
                   </p>
@@ -379,7 +276,7 @@
                           <i class="fa fa-phone-alt me-3"></i> +254 721706997
                         </p>
                         <p class="mb-2">
-                          <i class="fa fa-envelope me-3"></i>info@Innn'out@gmail.com
+                          <i class="fa fa-envelope me-3"></i>info@Springsf'Olives@gmail.com
                 
                         </p>
                         <div class="d-flex pt-2">
@@ -410,7 +307,7 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">INN N' OUT</a>, All Right Reserved. 
+                            &copy; <a class="border-bottom" href="#">Springs f' Olives</a>, All Right Reserved. 
 							
 							
 							Designed By <a class="border-bottom" href="h">IT job shadowing dept</a>

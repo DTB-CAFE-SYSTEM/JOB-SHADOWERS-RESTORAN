@@ -93,7 +93,7 @@ include('database/connect.php');
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
           <a href="" class="navbar-brand p-0">
             <h1 class="text-primary m-0">
-              <i class="fa fa-utensils me-3"></i>Inn n Out
+              <i class="fa fa-utensils me-3"></i>Springs f' Olives
             </h1>
             <!-- <img src="img/logo.png" alt="Logo"> -->
           </a>
@@ -112,12 +112,12 @@ include('database/connect.php');
               <a href="service.php" class="nav-item nav-link">Service</a>
               <a href="cart.php" class="nav-item nav-link active">Cart</a>
               <div class="nav-item dropdown">
-                <a
+                <!-- <a
                   href="#"
                   class="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                   >Pages</a
-                >
+                > -->
                 <div class="dropdown-menu m-0">
                   <a href="booking.html" class="dropdown-item">Booking</a>
                   <a href="team.html" class="dropdown-item">Our Team</a>
@@ -177,9 +177,9 @@ include('database/connect.php');
 		    <div class="container">
 		      <div class="row mb-5">
 		        <div class="col-md-12">
-		          <div class="border p-4 rounded" role="alert">
+		          <!-- <div class="border p-4 rounded" role="alert">
 		            Returning customer? <a href="#">Click here</a> to login
-		          </div>
+		          </div> -->
 		        </div>
 		      </div>
 		      <div class="row">
@@ -361,6 +361,7 @@ include('database/connect.php');
 		                  <input type="text" class="form-control me-2" id="c_code" placeholder="Coupon Code" aria-label="Coupon Code" aria-describedby="button-addon2">
 		                  <div class="input-group-append">
 		                    <button class="btn btn-black btn-sm" type="button" id="button-addon2">Apply</button>
+												
 		                  </div>
 		                </div>
 
@@ -431,7 +432,7 @@ include('database/connect.php');
 		                </table>
 
 		                <div class="border p-3 mb-3">
-		                  <h3 class="h6 mb-0"><a class="d-block" data-bs-toggle="collapse" href="#collapsebank" role="button" aria-expanded="false" aria-controls="collapsebank">Direct Bank Transfer</a></h3>
+		                  <h3 class="h6 mb-0"><a class="d-block" data-bs-toggle="collapse" href="#collapsebank" role="button" aria-expanded="false" aria-controls="collapsebank">DIRECT BANK TRANSFER</a></h3>
 
 		                  <div class="collapse" id="collapsebank">
 		                    <div class="py-2">
@@ -440,18 +441,55 @@ include('database/connect.php');
 		                  </div>
 		                </div>
 
-		                <div class="border p-3 mb-3">
-		                  <h3 class="h6 mb-0"><a class="d-block" data-bs-toggle="collapse" href="#collapsecheque" role="button" aria-expanded="false" aria-controls="collapsecheque">Cheque Payment</a></h3>
+	 <!-- Checkout Section Start -->
+            <section id="checkout">
+                <div class="container">
+                    <header class="section-header">
+                        <h3>Checkout</h3>
+                    </header>
+                    <div class="row form">
+                        
+                        <div class="form-group row">
+                            <div class="cards">
+                                <p>We Accept:</p>
+                                <img src="img/credit-cards.png" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name on Card" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Credit card number" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Exp Month" />
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" placeholder="Exp Year" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" placeholder="CVV" />
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+            </section>
+            <!-- Checkout Section End -->
+
+            
+		                  <h3 class="h6 mb-0"><a class="d-block" data-bs-toggle="collapse" href="#collapsecheque" role="button" aria-expanded="false" aria-controls="collapsecheque">MPESA PAYMENT(S)</a></h3>
 
 		                  <div class="collapse" id="collapsecheque">
 		                    <div class="py-2">
-		                      <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+		                      <p class="mb-0">Make your payment directly into our MPESA account. Please use the MPESA CODE as the payment reference.</p>
 		                    </div>
 		                  </div>
 		                </div>
 
 		                <div class="border p-3 mb-5">
-		                  <h3 class="h6 mb-0"><a class="d-block" data-bs-toggle="collapse" href="#collapsepaypal" role="button" aria-expanded="false" aria-controls="collapsepaypal">Paypal</a></h3>
+		                  <!-- <h3 class="h6 mb-0"><a class="d-block" data-bs-toggle="collapse" href="#collapsepaypal" role="button" aria-expanded="false" aria-controls="collapsepaypal">Cheque Payment</a></h3> -->
 
 		                  <div class="collapse" id="collapsepaypal">
 		                    <div class="py-2">
@@ -460,8 +498,9 @@ include('database/connect.php');
 		                  </div>
 		                </div>
 
-		                <div class="form-group">
-		                  <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='thankyou.php'">Place Order</button>
+		                <div class="button">
+											
+		                  <button type= "submit" class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='thankyou.php'">Place Order</button>
 		                </div>
 
 		              </div>
@@ -478,7 +517,7 @@ include('database/connect.php');
 
 
 		 <!-- Footer Start -->
-         <div
+          <div
         class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
         data-wow-delay="0.1s"
       >
@@ -503,14 +542,15 @@ include('database/connect.php');
                 Contact
               </h4>
               <p class="mb-2">
-                <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York,
-                USA
+                <i class="fa fa-map-marker-alt me-3"></i> along Mombasa rd, opposite Airtel HQ
+          
               </p>
               <p class="mb-2">
-                <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+                <i class="fa fa-phone-alt me-3"></i> +254 721706997
               </p>
               <p class="mb-2">
-                <i class="fa fa-envelope me-3"></i>info@example.com
+                <i class="fa fa-envelope me-3"></i>info@Springsf'Olives@gmail.com
+      
               </p>
               <div class="d-flex pt-2">
                 <a class="btn btn-outline-light btn-social" href=""
@@ -544,19 +584,21 @@ include('database/connect.php');
               >
                 Newsletter
               </h4>
-              <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+              <p>For queries</p>
               <div class="position-relative mx-auto" style="max-width: 400px">
                 <input
                   class="form-control border-primary w-100 py-3 ps-4 pe-5"
                   type="text"
                   placeholder="Your email"
                 />
-                <button
-                  type="button"
-                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-                >
-                  SignUp
-                </button>
+                <a href="Signup.php">
+                  <button
+                    type="button"
+                    class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                  >
+                    SignUp
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -565,13 +607,13 @@ include('database/connect.php');
           <div class="copyright">
             <div class="row">
               <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All
+                &copy; <a class="border-bottom" href="#">Springs f' Olives</a>, All
                 Right Reserved.
 
-                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+
                 Designed By
-                <a class="border-bottom" href="https://htmlcodex.com"
-                  >HTML Codex</a
+                <a class="border-bottom" href=""
+                  >IT job shadowing team</a
                 >
               </div>
               <div class="col-md-6 text-center text-md-end">
